@@ -1,0 +1,3 @@
+{
+  "raw": "refs/heads/main\u0000main\u0000cf743f0\u0000origin/main\u0000ahead 2, behind 1\u00002 days ago\u00001750000000\u0000chore: release v0.6.0\nrefs/heads/feature/log\u0000feature/log\u0000a1b2c3d\u0000\u0000\u00003 hours ago\u00001750001000\u0000feat: add the log\nrefs/remotes/origin/main\u0000origin/main\u0000cf743f0\u0000\u0000\u00002 days ago\u00001750000000\u0000chore: release v0.6.0\nrefs/remotes/origin/HEAD\u0000origin/HEAD\u0000cf743f0\u0000\u0000\u00002 days ago\u00001750000000\u0000chore: release v0.6.0"
+}

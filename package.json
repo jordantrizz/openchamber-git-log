@@ -1,0 +1,48 @@
+{
+  "name": "openchamber-git-log",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Git log, status, branches and worktrees in an OpenChamber rail panel",
+  "type": "module",
+  "license": "MIT",
+  "repository": "github:jordantrizz/openchamber-git-log",
+  "engines": {
+    "node": ">=22"
+  },
+  "openchamber": {
+    "apiVersion": 1,
+    "engines": {
+      "openchamber": ">=2.6.0"
+    },
+    "contributes": {
+      "panel": {
+        "id": "git-log",
+        "name": "Git",
+        "icon": "icon.svg",
+        "entry": "dist/panel/index.html"
+      },
+      "service": {
+        "entry": "dist/service/main.js",
+        "runtime": "host",
+        "permissions": {
+          "exec": [
+            "git"
+          ]
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "verify:package": "node scripts/verify-package.mjs",
+    "check": "npm run typecheck && npm test && npm run build && npm run verify:package"
+  },
+  "devDependencies": {
+    "@openchamber/sdk": "2.6.0",
+    "@types/node": "^22.10.2",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.7.2"
+  }
+}
